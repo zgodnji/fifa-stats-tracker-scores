@@ -68,6 +68,14 @@ public class ScoreResource {
                 2,
                 2
         ));
+        Database.addScore(new Score(
+                "3",
+                "1",
+                "2",
+                "2",
+                1,
+                2
+        ));
         return Response.noContent().build();
     }
 
