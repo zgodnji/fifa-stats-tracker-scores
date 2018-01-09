@@ -4,8 +4,8 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD ./target/games-1.0.0.jar /app
+ADD ./target/scores-1.0.0.jar /app
 
-EXPOSE 8082
+EXPOSE 8083
 
-CMD ["java", "-jar", "games-1.0.0.jar"]
+CMD ["java", "-jar", "scores-1.0.0.jar"]

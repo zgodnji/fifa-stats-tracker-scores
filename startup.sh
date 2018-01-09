@@ -2,6 +2,6 @@
 
 mvn clean package
 
-docker build -t ancina/games .
+docker build -t ancina/scores .
 
-docker run -d -p 8082:8082 -t ancina/games
+docker run -d -p 8083:8083 -t ancina/scores

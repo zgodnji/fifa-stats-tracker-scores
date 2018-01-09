@@ -5,29 +5,29 @@ import java.util.List;
 
 
 public class Database {
-    private static List<Game> games = new ArrayList<>();
+    private static List<Score> scores = new ArrayList<>();
 
-    public static List<Game> getGames() {
-        return games;
+    public static List<Score> getScores() {
+        return scores;
     }
 
-    public static Game getGame(String gameId) {
-        for (Game game : games) {
-            if (game.getId().equals(gameId))
-                return game;
+    public static Score getScore(String scoreId) {
+        for (Score score : scores) {
+            if (score.getId().equals(scoreId))
+                return score;
         }
 
         return null;
     }
 
-    public static void addGame(Game game) {
-        games.add(game);
+    public static void addScore(Score score) {
+        scores.add(score);
     }
 
-    public static void deleteGame(String gameId) {
-        for (Game game : games) {
-            if (game.getId().equals(gameId)) {
-                games.remove(game);
+    public static void deleteScore(String scoreId) {
+        for (Score score : scores) {
+            if (score.getId().equals(scoreId)) {
+                scores.remove(score);
                 break;
             }
         }

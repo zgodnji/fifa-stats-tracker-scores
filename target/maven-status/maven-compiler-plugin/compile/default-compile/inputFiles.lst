@@ -1,5 +1,5 @@
-/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-games/src/main/java/com/zgodnji/fifastatstracker/GameProperties.java
-/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-games/src/main/java/com/zgodnji/fifastatstracker/GameApplication.java
-/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-games/src/main/java/com/zgodnji/fifastatstracker/Database.java
-/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-games/src/main/java/com/zgodnji/fifastatstracker/GameResource.java
-/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-games/src/main/java/com/zgodnji/fifastatstracker/Game.java
+/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-scores/src/main/java/com/zgodnji/fifastatstracker/ScoreProperties.java
+/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-scores/src/main/java/com/zgodnji/fifastatstracker/ScoreResource.java
+/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-scores/src/main/java/com/zgodnji/fifastatstracker/Database.java
+/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-scores/src/main/java/com/zgodnji/fifastatstracker/Score.java
+/home/andraz/Documents/Racunalniske_storitve_v_oblaku/fifa-stats-tracker-scores/src/main/java/com/zgodnji/fifastatstracker/ScoreApplication.java
