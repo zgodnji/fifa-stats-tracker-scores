@@ -1,5 +1,8 @@
 package com.zgodnji.fifastatstracker;
 
+import org.eclipse.microprofile.metrics.Counter;
+import org.eclipse.microprofile.metrics.annotation.Metric;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -12,6 +15,10 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class ScoreResource {
+
+    @Inject
+    @Metric(name = "scores_counter")
+    private Counter scoresCounter;
 
     @GET
     public Response getAllScores() {
@@ -31,6 +38,9 @@ public class ScoreResource {
     @POST
     public Response addNewScore(Score score) {
         Database.addScore(score);
+
+        scoresCounter.inc();
+
         return Response.noContent().build();
     }
 
@@ -38,6 +48,9 @@ public class ScoreResource {
     @Path("{scoreId}")
     public Response deleteScore(@PathParam("scoreId") String scoreId) {
         Database.deleteScore(scoreId);
+
+        scoresCounter.dec();
+
         return Response.noContent().build();
     }
 
@@ -52,6 +65,7 @@ public class ScoreResource {
                 3,
                 0
         ));
+        scoresCounter.inc();
         Database.addScore(new Score(
                 "2",
                 "1",
@@ -60,6 +74,7 @@ public class ScoreResource {
                 0,
                 1
         ));
+        scoresCounter.inc();
         Database.addScore(new Score(
                 "3",
                 "1",
@@ -68,6 +83,7 @@ public class ScoreResource {
                 2,
                 2
         ));
+        scoresCounter.inc();
         Database.addScore(new Score(
                 "3",
                 "1",
@@ -76,6 +92,52 @@ public class ScoreResource {
                 1,
                 2
         ));
+        scoresCounter.inc();
+        Database.addScore(new Score(
+                "4",
+                "2",
+                "1",
+                "3",
+                1,
+                2
+        ));
+        scoresCounter.inc();
+        Database.addScore(new Score(
+                "5",
+                "1",
+                "2",
+                "3",
+                1,
+                0
+        ));
+        scoresCounter.inc();
+        Database.addScore(new Score(
+                "6",
+                "1",
+                "2",
+                "3",
+                0,
+                0
+        ));
+        scoresCounter.inc();
+        Database.addScore(new Score(
+                "7",
+                "1",
+                "2",
+                "3",
+                5,
+                1
+        ));
+        scoresCounter.inc();
+        Database.addScore(new Score(
+                "8",
+                "1",
+                "2",
+                "1",
+                3,
+                3
+        ));
+        scoresCounter.inc();
         return Response.noContent().build();
     }
 
